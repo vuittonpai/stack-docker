@@ -63,3 +63,12 @@ Point a browser at [`http://localhost:5601`](http://localhost:5601) to see the r
 
 Log in with `elastic` and what ever your auto generated elastic password is from the
 setup.
+
+
+Running ES multi-node Step:
+1. set pwd path to .env files
+2. docker-compose -f setup.yml up
+3. docker-compose -f elkmultinodeFullEnvPassword.yml up -d
+
+
+
