@@ -1,3 +1,11 @@
+
+
+pipeline.workers: '12'
+pipeline.batch.size: '30000'
+pipeline.batch.delay: '50'
+config.reload.automatic: 'true'
+config.reload.interval: '10s'
+xpack.monitoring.enabled: 'true'
 http.host: 0.0.0.0
 # read password from logstash.keystore
 xpack.monitoring.elasticsearch.password: ${ELASTIC_PASSWORD}

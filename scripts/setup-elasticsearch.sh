@@ -46,7 +46,9 @@ if [[ -d /usr/share/elasticsearch/bin/x-pack ]]; then
             rm /config/ssl/docker-cluster.zip
         fi
         echo "Create cluster certs zipfile..."
-        /usr/share/elasticsearch/bin/elasticsearch-certutil cert --silent --pem --in /config/ssl/instances.yml --out /config/ssl/docker-cluster.zip --ca-cert /config/ssl/ca/ca.crt --ca-key /config/ssl/ca/ca.key
+        echo ${pwd}
+        ls
+        /usr/share/elasticsearch/bin/elasticsearch-certutil cert --silent --pem --in instances.yml --out /config/ssl/docker-cluster.zip --ca-cert /config/ssl/ca/ca.crt --ca-key /config/ssl/ca/ca.key
 
         if [ -d /config/ssl/docker-cluster ]; then
             rm -rf /config/ssl/docker-cluster

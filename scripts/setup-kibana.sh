@@ -19,6 +19,9 @@ while [[ "$(curl -u "elastic:${ELASTIC_PASSWORD}" --cacert $cacert -s -o /dev/nu
     sleep 5
 done
 
+echo ${ELASTIC_PASSWORD} "\n"
+echo $es_url "\n"
+echo "=== Set Password to ES ==="
 # Set the password for the kibana user.
 # REF: https://www.elastic.co/guide/en/x-pack/6.0/setting-up-authentication.html#set-built-in-user-passwords
 until curl -u "elastic:${ELASTIC_PASSWORD}" --cacert $cacert -s -H 'Content-Type:application/json' \
